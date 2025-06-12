@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Multicentro Santa Catalina</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylepanel.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Multicentro Santa Catalina</h1>
+            <div class="user-section">
+                <div class="user-info">
+                    <div class="user-avatar">👨‍💼</div>
+                    <span class="user-name">Elmer</span>
+                </div>
+                <button class="logout-btn" onclick="logout()">CERRAR SESIÓN</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item active" onclick="selectSection('ventas')">VENTAS</div>
+            <div class="sidebar-item" onclick="selectSection('almacen')">ALMACEN</div>
+            <div class="sidebar-item" onclick="selectSection('caja')">CAJA</div>
+            <div class="sidebar-item" onclick="selectSection('taller')">TALLER</div>
+            <div class="sidebar-item" onclick="selectSection('gerencia')">GERENCIA</div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <div class="content-header">
+                <h2 class="content-title">Seleccionar modelo, marca y/o refacción</h2>
+            </div>
+
+            <!-- Vehicle Selection Grid -->
+            <div class="vehicle-grid">
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">Van</label>
+                    <img src="img/van-1.png" alt="Van">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">Sedan</label>
+                    <img src="img/sedan-1.png" alt="Sedan">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">Hatchback</label>
+                    <img src="img/hatchback.png" alt="Hatchback">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">Pickup</label>
+                    <img src="img/pickup-1.png" alt="Pickup">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">SUV</label>
+                    <img src="img/suv-1.png" alt="SUV">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">Coupe</label>
+                    <img src="img/coupe.png" alt="Coupe">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">Sport</label>
+                    <img src="img/sport-car.png" alt="Sport">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">Convertible</label>
+                    <img src="img/convertible.png" alt="Convertible">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+                <div class="vehicle-item" onclick="selectVehicle(this)">
+                    <label class="vehicle-label">Wagon</label>
+                    <img src="img/wagon-1.png" alt="Wagon">
+                    <input type="checkbox" class="vehicle-checkbox">
+                </div>
+            </div>
+
+            <br>
+            <!-- Brand Selection Grid -->
+            <div class="brand-section">
+                <div class="brand-grid">
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/Wolkswagen_logo.jpg" alt="Volkswagen">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/Honda_logo.jpg" alt="Honda">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/toyota-logo.png" alt="Toyota">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/renault-logo.png" alt="Renault">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/BMW-Logo.jpg" alt="BMW">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/nisan_logo.jpg" alt="Nissan">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/ford-logo.png" alt="Ford">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/mercedes-logo.png" alt="Mercedes">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/subaru-logo.png" alt="Subaru">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/audi-logo.png" alt="Audi">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/mazda-logo.png" alt="Mazda">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                    <div class="brand-item" onclick="selectBrand(this)">
+                        <img src="img/bugatti-logo.png" alt="Bugatti">
+                        <input type="checkbox" class="brand-checkbox">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Checklist -->
+            <div class="services-section">
+                <div class="services-grid">
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="carroceria">
+                        <label for="carroceria" class="service-label">Carrocería</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="suspension">
+                        <label for="suspension" class="service-label">Suspensión</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="sistema-electrico">
+                        <label for="sistema-electrico" class="service-label">Sistema Eléctrico</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="accesorios">
+                        <label for="accesorios" class="service-label">Accesorios</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="aros">
+                        <label for="aros" class="service-label">Aros</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="llantas">
+                        <label for="llantas" class="service-label">Llantas</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="componentes">
+                        <label for="componentes" class="service-label">Componentes del motor</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="faros">
+                        <label for="faros" class="service-label">Faros</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="parachoques">
+                        <label for="parachoques" class="service-label">Parachoques</label>
+                    </div>
+                    <div class="service-item">
+                        <input type="checkbox" class="service-checkbox" id="lunas">
+                        <label for="lunas" class="service-label">Lunas</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <input type="text" class="search-input" placeholder="Convertible" value="Convertible">
+                <button class="search-btn" onclick="performSearch()">Buscar</button>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="color: #666; font-size: 14px;">Las mejores marcas al mejor precio</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Conoce nuestras tiendas</h4>
+                    <a href="#contactos" class="footer-icon">
+                        <img src="img/3d-map.png" alt="Ubicaciones" />
+                    </a>
+                    <p> &copy; Luis Cusy</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Sobre Nosotros</h4>
+                    <a href="#" class="footer-icon">
+                        <img src="img/video-learning.png" alt="Sobre nosotros" />
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h4>Separa una cita</h4>
+                    <a href="#" class="footer-icon">
+                        <img src="img/3d-calendar.png" alt="Agendar cita" />
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h4>Nuestras Redes Sociales</h4>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+                            <img src="img/tik-tok.png" alt="TikTok" />
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                            <img src="img/facebook.png" alt="Facebook" />
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                            <img src="img/instagram.png" alt="Instagram" />
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                            <img src="img/youtube.png" alt="YouTube" />
+                        </a>
+                        <a href="https://wa.me/+51945567733" target="_blank" aria-label="WhatsApp">
+                            <img src="img/whatsapp.png" alt="WhatsApp" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
