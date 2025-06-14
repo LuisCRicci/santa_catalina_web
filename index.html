@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multicentro Santa Catalina</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,11 +35,58 @@
                     <h2>Tu Tienda de Confianza</h2>
                     <h3>Vive la aventura</h3>
                 </div>
-                <div class="hero-cars">
-                    <img src="img/auto_2.jpg" alt="SUV Verde" class="car-image">
-                    <img src="img/auto_3 .jpg" alt="Auto Deportivo Blanco" class="car-image">
-                    <img src="img/auto_1.jpg" alt="Sedán Rojo" class="car-image">
-                    <img src="img/NP_minivan.jpg" alt="Van Plateada" class="car-image">
+
+                <!-- Carrusel 3D -->
+                <div class="carousel-3d-container">
+                    <div class="carousel-3d" id="carousel3d">
+                        <div class="carousel-item-3d" data-car="suv">
+                            <div class="car-card">
+                                <img src="img/auto_2.jpg" alt="SUV Verde" class="car-image-3d">
+                                <div class="car-title">SUV Aventura</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item-3d" data-car="deportivo">
+                            <div class="car-card">
+                                <img src="img/auto_3 .jpg" alt="Auto Deportivo" class="car-image-3d">
+                                <div class="car-title">Deportivo Elegante</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item-3d" data-car="sedan">
+                            <div class="car-card">
+                                <img src="img/auto_1.jpg" alt="Sedán Ejecutivo" class="car-image-3d">
+                                <div class="car-title">Sedán Ejecutivo</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item-3d" data-car="minivan">
+                            <div class="car-card">
+                                <img src="img/NP_minivan.jpg" alt="Minivan Familiar" class="car-image-3d">
+                                <div class="car-title">Minivan Familiar</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="carousel-controls">
+                        <button class="control-btn" id="prevBtn">❮</button>
+                        <button class="control-btn play-pause-btn" id="playPauseBtn">⏸️</button>
+                        <button class="control-btn" id="nextBtn">❯</button>
+                    </div>
+
+                    <!-- Indicators -->
+                    <div class="carousel-indicators-3d">
+                        <div class="indicator-3d active" data-index="0"></div>
+                        <div class="indicator-3d" data-index="1"></div>
+                        <div class="indicator-3d" data-index="2"></div>
+                        <div class="indicator-3d" data-index="3"></div>
+                    </div>
+
+                    <!-- Info Panel -->
+                    <div class="car-info-panel" id="infoPanel">
+                        <div class="info-title" id="infoTitle">SUV Aventura</div>
+                        <div class="info-description" id="infoDescription">
+                            Perfecto para aventuras familiares con tecnología avanzada y máximo confort.
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -102,13 +151,9 @@
                 </div>
                 <div class="category-cars">
                     <img src="img/sedan-1.png" alt="Sedan 1">
-                   
                     <img src="img/sports-1.png" alt="Sports 1">
-                   
                     <img src="img/van-1.png" alt="Van 1">
-                    
                 </div>
-                
                 <div class="category-row">
                     <div class="category-header">Autos de lujo</div>
                     <div class="category-header">Hybrid</div>
@@ -116,13 +161,9 @@
                 </div>
                 <div class="category-cars">
                     <img src="img/luxury-1.png" alt="Luxury 1">
-                  
                     <img src="img/hybrid-1.png" alt="Hybrid 1">
-                   
                     <img src="img/pickup-1.png" alt="Pickup 1">
-                    
                 </div>
-                
                 <div class="category-row">
                     <div class="category-header">Convertibles</div>
                     <div class="category-header">Station Wagon</div>
@@ -221,5 +262,18 @@
             </div>
         </div>
     </footer>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Configurar el carrusel
+            $('#heroCarousel').carousel({
+                    interval: 4000  // 4 segundos
+                });
+        });
+    </script>
 </body>
 </html>
