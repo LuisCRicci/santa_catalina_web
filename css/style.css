@@ -232,46 +232,6 @@ nav a.active {
     text-align: center;
 }
 
-/* Control Buttons */
-.carousel-controls {
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.control-btn {
-    background: linear-gradient(145deg, #4B0082, #6A1B9A);
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.3);
-}
-
-.control-btn:hover {
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.4);
-}
-
-.control-btn:active {
-    transform: translateY(-1px) scale(1.05);
-}
-
-.play-pause-btn {
-    background: linear-gradient(145deg, #DC143C, #FF1744);
-    width: 60px;
-    height: 60px;
-    font-size: 20px;
-}
-
 
 @keyframes rotate3d {
     from { transform: rotateY(0deg); }
@@ -301,12 +261,6 @@ nav a.active {
     border-top: 1px solid #ddd;
 }
 
-.brands h3 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 1.2em;
-}
 
 .brand-logos {
     display: flex;
@@ -317,9 +271,13 @@ nav a.active {
 }
 
 .brand-logos img {
-    height: 80px;
-    width: auto;
-    object-fit: contain;
+     max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.brand-logos img:hover {
+    transform: scale(1.1);
 }
 
 /* All Brands Section */
@@ -614,7 +572,6 @@ footer {
     outline: none;
     border-color: #4B0082;
 }
-
 
 .forgot-password {
     margin-top: 15px;
