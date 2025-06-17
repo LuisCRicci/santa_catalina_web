@@ -7,7 +7,7 @@
 ### Puedes ver el proyecto aqui: 
 
 <p align="left">
-  <a href="https://backbonejs.org" target="_blank" rel="noreferrer">
+  <a href="https://luiscricci.github.io/santa_catalina_web/" target="_blank" rel="noreferrer">
     AQUI
   </a>
  </p> 
