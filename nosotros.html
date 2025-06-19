@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multicentro Santa Catalina</title>
+     <link rel="icon" href="./img/coche-de-carreras.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -11,213 +12,96 @@
 <body>
     <header>
         <div class="container">
-            <h1>Multicentro Santa Catalina</h1>
+            <hgroup>
+                <h1>Multicentro Santa Catalina</h1>
+                <h3>Tu Tienda de Confianza</h3>
+            </hgroup>
             <div class="user-section">
                 <div class="user-icon">👤</div>
                 <button type="action" class="login-btn" id="loginBtn"> <a href="login.html">Ingresar / registro</a></button>
             </div>
         </div>
-        <nav>
+        <nav class="navbar navbar-expand-lg navbar-gradient bg-white">
             <div class="container">
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#marcas">Marcas</a></li>
-                    <li><a href="#modelos">Modelos</a></li>
-                    <li><a href="#contactos">contactos</a></li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Vehículos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html">Marcas</a></li>
+                                <li><a class="dropdown-item" href="index.html">Modelos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="ventas.html">Ventas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nosotros
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="nosotros.html">Historia</a></li>
+                                <li><a class="dropdown-item" href="tiendas.html">Tiendas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section class="about-us">
             <div class="container">
                 <div class="hero-content">
-                    <h2>Tu Tienda de Confianza</h2>
-                    <h3>Vive la aventura</h3>
-                </div>
-                <!-- Carrusel 3D -->
-                <div class="carousel-3d-container">
-                    <div class="carousel-3d" id="carousel3d">
-                        <div class="carousel-item-3d" data-car="suv">
-                            <div class="car-card">
-                                <img src="img/auto_2.jpg" alt="SUV Verde" class="car-image-3d">
-                                <div class="car-title">SUV Aventura</div>
-                            </div>
-                        </div>
-                        <div class="carousel-item-3d" data-car="deportivo">
-                            <div class="car-card">
-                                <img src="img/auto_3 .jpg" alt="Auto Deportivo" class="car-image-3d">
-                                <div class="car-title">Deportivo Elegante</div>
-                            </div>
-                        </div>
-                        <div class="carousel-item-3d" data-car="sedan">
-                            <div class="car-card">
-                                <img src="img/auto_1.jpg" alt="Sedán Ejecutivo" class="car-image-3d">
-                                <div class="car-title">Sedán Ejecutivo</div>
-                            </div>
-                        </div>
-                        <div class="carousel-item-3d" data-car="minivan">
-                            <div class="car-card">
-                                <img src="img/NP_minivan.jpg" alt="Minivan Familiar" class="car-image-3d">
-                                <div class="car-title">Minivan Familiar</div>
-                            </div>
-                        </div>
-                        <div class="carousel-item-3d" data-car="pickup">
-                            <div class="car-card">
-                                <img src="img/pickup.jpg" alt="Pick Up" class="car-image-3d">
-                                <div class="car-title">Pick Up Todo Terreno</div>
-                            </div>
-                        </div>
-                    </div>
+                    <h2>Santa Catalina Group</h2>
+                    <h3>Conoce nuestra historia</h3>
                 </div>
             </div>
         </section>
-        <section class="brands" id="marcas">
+        
+        <section class="about-us">
             <div class="container">
-                <h3>Las mejores marcas al mejor precio</h3>
-                <div class="brand-logos">
-                    <img src="img/peugeot-logo.png" alt="Peugeot">
-                    <img src="img/Honda_logo.jpg" alt="Honda">
-                    <img src="img/BMW-Logo.jpg" alt="BMW">
-                    <img src="img/nisan_logo.jpg" alt="Nissan">
-                    <img src="img/Wolkswagen_logo.jpg" alt="Volkswagen">
-                    <img src="img/chevrolet_logo.jpg" alt="Chevrolet">
-                </div>
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una empresa dedicada a la venta de vehículos de alta calidad, ofreciendo una amplia gama de marcas y modelos para satisfacer las necesidades de nuestros clientes. Con años de experiencia en el mercado; desde 2010 hasta la actualidad hemos sido líderes en la industria automotriz en Perú y en el mundo.</p><p>En Santa Catalina Group, nos comprometemos a brindar un servicio excepcional y productos confiables.</p>
+                
+                <h2>Misión</h2>
+                <p>Nuestra misión es ser el líder en la industria automotriz, proporcionando vehículos que no solo cumplan con los estándares más altos de calidad, sino que también ofrezcan una experiencia de conducción inigualable.</p>
             </div>
         </section>
-        <section class="all-brands" >
-            <div class="container">
-                <div class="brand-grid">
-                    <img src="img/byd-logo.png" alt="byd">
-                    <img src="img/ford-logo.png" alt="Ford">
-                    <img src="img/mazda-logo.png" alt="Mazda">
-                    <img src="img/toyota-logo.png" alt="Toyota">
-                    <img src="img/mitsubishi-logo.png" alt="Mitsubishi">
-                    <img src="img/audi-logo.png" alt="Audi">
-                    <img src="img/mercedes-logo.png" alt="Mercedes">
-                    <img src="img/jeep-logo.png" alt="Jeep">
-                    <img src="img/daewoo-logo.png" alt="Daewoo">
-                    <img src="img/chrysler-logo.png" alt="Chrysler">
-                    <img src="img/lexus-logo.png" alt="Lexus">
-                    <img src="img/volvo-logo.png" alt="Volvo">
-                    <img src="img/renault-logo.png" alt="Renault">
-                    <img src="img/subaru-logo.png" alt="Subaru">
-                    <img src="img/kia-logo.png" alt="Kia">
-                    <img src="img/suzuki-logo.png" alt="Suzuki">
-                    <img src="img/mini-logo.png" alt="Mini">
-                    <img src="img/fiat-logo.png" alt="Fiat">
-                    <img src="img/landrover-logo.png" alt="Land Rover">
-                    <img src="img/dodge-logo.png" alt="Dodge">
-                    <img src="img/citroen-logo.png" alt="Citroën">
-                    <img src="img/gmc-logo.png" alt="GMC">
-                    <img src="img/bentley-logo.png" alt="Bentley">
-                    <img src="img/maserati-logo.png" alt="Maserati">
-                    <img src="img/rover-logo.png" alt="Rover">
-                    <img src="img/bugatti-logo.png" alt="Bugatti">
-                    <img src="img/daihatsu-logo.png" alt="Daihatsu">
-                    <img src="img/jaguar-logo.png" alt="Jaguar">
-                    <img src="img/aston-martin-logo.png" alt="Aston Martin">
-                    <img src="img/rolls-royce-logo.png" alt="Rolls Royce">
-                    <img src="img/ferrari-logo.png" alt="Ferrari">
-                    <img src="img/alfa-romeo-logo.png" alt="Alfa Romeo">
-                </div>
-            </div>
-        </section>
+        
+    </main>
 
-        <section class="car-categories" id="modelos">
-            <div class="container">
-                <div class="category-row">
-                    <div class="category-header">Turismo "Sedan"</div>
-                    <div class="category-header">Deportivos</div>
-                    <div class="category-header">Vans y minivans</div>
-                </div>
-                <div class="category-cars">
-                    <img src="img/sedan-1.png" alt="Sedan 1">
-                    <img src="img/sports-1.png" alt="Sports 1">
-                    <img src="img/van-1.png" alt="Van 1">
-                </div>
-                <div class="category-row">
-                    <div class="category-header">Autos de lujo</div>
-                    <div class="category-header">Hybrid</div>
-                    <div class="category-header">Pickup</div>
-                </div>
-                <div class="category-cars">
-                    <img src="img/luxury-1.png" alt="Luxury 1">
-                    <img src="img/hybrid-1.png" alt="Hybrid 1">
-                    <img src="img/pickup-1.png" alt="Pickup 1">
-                </div>
-                <div class="category-row">
-                    <div class="category-header">Convertibles</div>
-                    <div class="category-header">Station Wagon</div>
-                    <div class="category-header">Sport Utilities</div>
-                </div>
-                <div class="category-cars">
-                    <img src="img/convertible-1.png" alt="Convertible 1">
-                    
-                    <img src="img/wagon-1.png" alt="Wagon 1">
-                    
-                    <img src="img/suv-1.png" alt="SUV 1">
-                    
-                </div>
-            </div>
-        </section>
-
-        <section class="location-info" id="contactos">
-            <div class="container">
-                <h3>Conoce nuestras tiendas a nivel nacional</h3>
-                <div class="location-content">
-                    <div class="map-placeholder">
-                        <div class="map-area">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.5374766877404!2d-71.97876638516844!3d-13.525249190474658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd5d826598431%3A0x2aa0e2b07e6dba71!2sWanchaq%2C%20Cusco%2C%20Per%C3%BA!5e0!3m2!1ses!2s!4v1623456789012!5m2!1ses!2s"
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy">
-                            </iframe>
-                        </div>
-                    </div>
-                    <div class="location-details">
-                        <h4>Multicentro Cuzco</h4>
-                        <table class="contact-table">
-                            <tr>
-                                <td><strong>Dirección:</strong></td>
-                                <td>Jr. Wanchaq # 526 Cuzco - Peru</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Celular:</strong></td>
-                                <td>📱 945567733</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Teléfono:</strong></td>
-                                <td>📞 036 6348564</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     <footer>
         <div class="container">
             <div class="footer-sections">
                 <div class="footer-section">
                     <h4>Conoce nuestras tiendas</h4>
-                    <a href="#contactos" class="footer-icon">
+                    <a href="tiendas.html" class="footer-icon">
                         <img src="img/3d-map.png" alt="Ubicaciones" />
                     </a>
-                    <p> &copy; Luis Cusy</p>
+                    <p> &copy; LuisCRicci</p>
                 </div>
                 <div class="footer-section">
                     <h4>Sobre Nosotros</h4>
-                    <a href="#" class="footer-icon">
+                    <a href="nosotros.html" class="footer-icon">
                         <img src="img/video-learning.png" alt="Sobre nosotros" />
                     </a>
                 </div>
                 <div class="footer-section">
                     <h4>Separa una cita</h4>
-                    <a href="#" class="footer-icon">
+                    <a href="login.html" class="footer-icon">
                         <img src="img/3d-calendar.png" alt="Agendar cita" />
                     </a>
                 </div>

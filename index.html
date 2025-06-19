@@ -12,20 +12,51 @@
 <body>
     <header>
         <div class="container">
-            <h1>Multicentro Santa Catalina</h1>
+            <hgroup>
+                <h1>Multicentro Santa Catalina</h1>
+                <h3>Tu Tienda de Confianza</h3>
+            </hgroup>
             <div class="user-section">
                 <div class="user-icon">👤</div>
                 <button type="action" class="login-btn" id="loginBtn"> <a href="login.html">Ingresar / registro</a></button>
             </div>
         </div>
-        <nav>
+        <nav class="navbar navbar-expand-lg navbar-gradient bg-white">
             <div class="container">
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#marcas">Marcas</a></li>
-                    <li><a href="#modelos">Modelos</a></li>
-                    <li><a href="#contactos">contactos</a></li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Vehículos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#marcas">Marcas</a></li>
+                                <li><a class="dropdown-item" href="#modelos">Modelos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="ventas.html">Ventas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactos">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nosotros
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="nosotros.html">Historia</a></li>
+                                <li><a class="dropdown-item" href="tiendas.html">Tiendas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -33,8 +64,7 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h2>Tu Tienda de Confianza</h2>
-                    <h3>Vive la aventura</h3>
+                    <h2>Vive la aventura</h2>
                 </div>
                 <!-- Carrusel 3D -->
                 <div class="carousel-3d-container">
@@ -74,7 +104,7 @@
             </div>
         </section>
         <section class="brands" id="marcas">
-            <div class="container">
+            <article class="container">
                 <h3 class="text-center mb-4">Las mejores marcas al mejor precio</h3>
                 <div class="row justify-content-center">
                     <div class="brand-logos">
@@ -85,10 +115,8 @@
                         <img src="img/Wolkswagen_logo.jpg" alt="Volkswagen">
                         <img src="img/chevrolet_logo.jpg" alt="Chevrolet">
                     </div>
-                    
                 </div>
-                
-            </div>
+            </article>
         </section>
         <section class="all-brands" >
             <div class="container-fluid">
@@ -130,7 +158,7 @@
         </section>
 
         <section class="car-categories" id="modelos">
-            <div class="container">
+            <article class="container">
                 <div class="category-grid">
                     <!-- Grupo 1 -->
                     <div class="category-group">
@@ -172,11 +200,11 @@
                         <img src="img/suv-1.png" alt="SUV 1" class="category-img">
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
 
         <section class="location-info" id="contactos">
-            <div class="container">
+            <article class="container">
                 <h3 class="section-title">Conoce nuestras tiendas a nivel nacional</h3>
                 <div class="location-content">
                     <div class="map-placeholder">
@@ -209,28 +237,28 @@
                         </table>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
-
+    </main>
     <footer>
         <div class="container">
             <div class="footer-sections">
                 <div class="footer-section">
                     <h4>Conoce nuestras tiendas</h4>
-                    <a href="#contactos" class="footer-icon">
+                    <a href="tiendas.html" class="footer-icon">
                         <img src="img/3d-map.png" alt="Ubicaciones" />
                     </a>
                     <p> &copy; LuisCRicci</p>
                 </div>
                 <div class="footer-section">
                     <h4>Sobre Nosotros</h4>
-                    <a href="#" class="footer-icon">
+                    <a href="nosotros.html" class="footer-icon">
                         <img src="img/video-learning.png" alt="Sobre nosotros" />
                     </a>
                 </div>
                 <div class="footer-section">
                     <h4>Separa una cita</h4>
-                    <a href="#" class="footer-icon">
+                    <a href="login.html" class="footer-icon">
                         <img src="img/3d-calendar.png" alt="Agendar cita" />
                     </a>
                 </div>

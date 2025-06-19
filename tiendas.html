@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Principales tiendas a nivel nacional</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/coche-de-carreras.png" type="image/x-icon">
+        <title>Tiendas - Multicentro Santa Catalina</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <hgroup>
+                    <h1>Multicentro Santa Catalina</h1>
+                    <h3>Tu Tienda de Confianza</h3>
+                </hgroup>
+                <div class="user-section">
+                    <div class="user-icon">👤</div>
+                    <button type="action" class="login-btn" id="loginBtn"> <a href="login.html">Ingresar / registro</a></button>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-gradient bg-white">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarMain">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Vehículos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="index.html">Marcas</a></li>
+                                    <li><a class="dropdown-item" href="index.html">Modelos</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="ventas.html">Ventas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Contacto</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Nosotros
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="nosotros.html">Historia</a></li>
+                                    <li><a class="dropdown-item" href="tiendas.html">Tiendas</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="stores-page">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar de tiendas -->
+                    <div class="col-md-4 col-lg-3">
+                        <aside class="stores-sidebar">
+                            <h2>Nuestras Tiendas</h2>
+                            <div class="stores-list">
+                                <!-- Más tiendas aquí desde JS -->
+                            </div>
+                        </aside>
+                    </div>
+                    
+                    <!-- Mapa -->
+                    <div class="col-md-8 col-lg-9">
+                        <section class="map-container">
+                            <div id="map"></div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main> 
+        <footer>
+            <div class="container">
+                <div class="footer-sections">
+                    <div class="footer-section">
+                        <h4>Conoce nuestras tiendas</h4>
+                        <a href="tiendas.html" class="footer-icon">
+                            <img src="img/3d-map.png" alt="Ubicaciones" />
+                        </a>
+                        <p> &copy; LuisCRicci</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Sobre Nosotros</h4>
+                        <a href="nosotros.html" class="footer-icon">
+                            <img src="img/video-learning.png" alt="Sobre nosotros" />
+                        </a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Separa una cita</h4>
+                        <a href="login.html" class="footer-icon">
+                            <img src="img/3d-calendar.png" alt="Agendar cita" />
+                        </a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Nuestras Redes Sociales</h4>
+                        <div class="social-icons">
+                            <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+                                <img src="img/tik-tok.png" alt="TikTok" />
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                                <img src="img/facebook.png" alt="Facebook" />
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                                <img src="img/instagram.png" alt="Instagram" />
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                                <img src="img/youtube.png" alt="YouTube" />
+                            </a>
+                            <a href="https://wa.me/+51945567733" target="_blank" aria-label="WhatsApp">
+                                <img src="img/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>   
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="js/tiendas.js"></script>
+    </body>
+</html>
