@@ -3,6 +3,9 @@
 - HTML
 - CSS
 - JAVASCRIPT
+- Leaflet
+- Bootstrap 
+
 
 ### Puedes ver el proyecto aqui: 
 
