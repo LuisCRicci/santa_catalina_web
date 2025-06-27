@@ -59,3 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// Reproducir el audio automáticamente al cargar la página (puede requerir interacción del usuario en algunos navegadores)
+    window.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('heroAudio');
+        // Intentar reproducir el audio automáticamente
+        var playPromise = audio.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                // Si el navegador bloquea la reproducción automática, no hacer nada
+            });
+        }
+    });

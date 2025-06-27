@@ -935,3 +935,55 @@ footer {
         height: 75vh;
     }
 }
+
+
+/* Estilos para la sección de LO NUEVO */
+
+/* Agrega esto al final de css/style.css */
+/* Mejor presentación para la sección de últimos modelos */
+.latest-models {
+    background: #f8f9fa;
+}
+
+.model-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.model-item {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.model-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(44,62,80,0.12);
+}
+
+.model-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px 16px 0 0;
+    background: #222;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #4B0082;
+    margin-bottom: 0.5rem;
+}
+
+.play-btn {
+    transition: background 0.2s, color 0.2s;
+}
+
+.play-btn:focus, .play-btn:hover {
+    background: #4B0082;
+    color: #fff;
+    border-color: #4B0082;
+}
