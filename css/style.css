@@ -987,3 +987,13 @@ footer {
     color: #fff;
     border-color: #4B0082;
 }
+/* Uniformiza el tamaño de los posters de video en la sección de modelos */
+.ratio .model-video,
+.ratio video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 16px 16px 0 0;
+    background: #222;
+    display: block;
+}
