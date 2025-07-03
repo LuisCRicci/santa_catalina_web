@@ -1,74 +1,64 @@
+// Selecciona una sección del sidebar y marca la opción activa
 function selectSection(section) {
-    // Remove active class from all sidebar items
+    // Quita la clase 'active' de todos los elementos del sidebar
     document.querySelectorAll('.sidebar-item').forEach(item => {
         item.classList.remove('active');
     });
     
-    // Add active class to clicked item
-    event.target.classList.add('active');
+    // Agrega la clase 'active' al elemento seleccionado (debería ser 'section' en vez de 'target')
+    target.classList.add('active');
     
-    // Here you would load different content based on section
+    // Aquí se podría cargar contenido dinámicamente según la sección seleccionada
     console.log('Selected section:', section);
 }
 
+// Selecciona o deselecciona un vehículo en la interfaz
 function selectVehicle(element) {
     const checkbox = element.querySelector('.vehicle-checkbox');
     const isSelected = element.classList.contains('selected');
     
     if (isSelected) {
+        // Si ya está seleccionado, lo deselecciona y desmarca el checkbox
         element.classList.remove('selected');
         checkbox.checked = false;
     } else {
+        // Si no está seleccionado, lo selecciona y marca el checkbox
         element.classList.add('selected');
         checkbox.checked = true;
     }
 }
 
+// Selecciona o deselecciona una marca en la interfaz
 function selectBrand(element) {
     const checkbox = element.querySelector('.brand-checkbox');
     const isSelected = element.classList.contains('selected');
     
     if (isSelected) {
+        // Si ya está seleccionada, la deselecciona y desmarca el checkbox
         element.classList.remove('selected');
         checkbox.checked = false;
     } else {
+        // Si no está seleccionada, la selecciona y marca el checkbox
         element.classList.add('selected');
         checkbox.checked = true;
     }
 }
 
-function performSearch() {
-    const searchTerm = document.querySelector('.search-input').value;
-    console.log('Searching for:', searchTerm);
-    // Here you would implement the search functionality
-    alert('Buscando: ' + searchTerm);
-}
 
+// Cierra la sesión del usuario tras confirmación
 function logout() {
     if (confirm('¿Está seguro que desea cerrar sesión?')) {
-        // Redirect to login page
+        // Redirige a la página de login
         window.location.href = 'login.html';
     }
 }
 
-// Handle service checkboxes
+// Maneja los cambios en los checkboxes de servicios
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.service-checkbox').forEach(checkbox => {
         checkbox.addEventListener('change', function() {
+            // Muestra en consola el servicio seleccionado y su estado
             console.log('Service selected:', this.id, this.checked);
         });
     });
 });
-
-
-// Reproducir el audio automáticamente al cargar la página (puede requerir interacción del usuario en algunos navegadores)
-    window.addEventListener('DOMContentLoaded', function() {
-        var audio = document.getElementById('heroAudio');
-        // Intentar reproducir el audio automáticamente
-        var playPromise = audio.play();
-        if (playPromise !== undefined) {
-            playPromise.catch(function(error) {
-                // Si el navegador bloquea la reproducción automática, no hacer nada
-            });
-        }
-    });

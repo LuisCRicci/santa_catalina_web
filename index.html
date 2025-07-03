@@ -67,13 +67,12 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h2>Vive la aventura</h2>
-                    <!-- al lado izquierdo controles para reproducir el audio de ./mp3/run-with-me-123095.mp3 -->
+                    <h3>Vive la aventura</h3>
                     <div class="audio-controls">
                         <audio id="heroAudio" preload="auto" autoplay src="mp3/run-with-me-123095 (mp3cut.net).mp3"></audio>
-                        <button class="btn btn-primary btn-sm me-1" onclick="document.getElementById('heroAudio').play()">▶️</button>
-                        <button class="btn btn-secondary btn-sm me-1" onclick="document.getElementById('heroAudio').pause()">⏸️</button>
-                        <button class="btn btn-danger btn-sm" onclick="document.getElementById('heroAudio').currentTime=0;document.getElementById('heroAudio').pause()">⏹️</button>
+                        <button class="btn btn-primary btn-sm me-1" id="playAudioBtn">▶️</button>
+                        <button class="btn btn-secondary btn-sm me-1" id="pauseAudioBtn">⏸️</button>
+                        <button class="btn btn-danger btn-sm" id="stopAudioBtn">⏹️</button>
                     </div>
                 </div>
                 <!-- Carrusel 3D -->
